@@ -1,0 +1,47 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: yellow;
+  font-family: Arial, Geneva, sans-serif;
+}
+
+body > section {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  height: 100vh;
+}
+
+body > section > header {
+  flex-basis: 10%;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+body > section > main {
+  flex-basis: 20%;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+body > section > footer {
+  flex-basis: 10%;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
