@@ -21,6 +21,7 @@ body {
   font-family: 'Montserrat';
 
   background: #f1f1f5 url(../img/back.svg) no-repeat bottom center;
+  background-size: 475px 135px;
 }
 
 body > section {
@@ -32,7 +33,7 @@ body > section {
 }
 
 body > section > header {
-  flex-basis: 180px;
+  flex-basis: 140px;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-around;
@@ -42,8 +43,8 @@ body > section > header {
 body > section > header > img {
   width: 134px;
   height: auto;
-  margin-top: 70px;
-  margin-bottom: 30px;
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 
 body > section > main {
@@ -57,7 +58,7 @@ body > section > main {
 }
 
 .title {
-  width: 560px;
+  width: 255px;
   height: auto;
   margin-top: 40px;
   margin-bottom: 35px;
@@ -67,8 +68,8 @@ body > section > main {
   margin: 0;
   font-family: 'Montserrat Semi Bold';
   text-align: center;
-  font-size: 44px;
-  line-height: 55px;
+  font-size: 20px;
+  line-height: 30px;
 }
 
 .date {
@@ -84,11 +85,27 @@ body > section > main {
   font-size: 16px;
 }
 
-body > section > footer {
-  flex-basis: 30%;
+/* Desktop screen Sizes */
+@media only screen and (min-width: 768px) {
+  body {
+    background-size: auto;
+  }
 
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: flex-end;
-  align-items: center;
+  body > section > header {
+    flex-basis: 180px;
+  }
+
+  body > section > header > img {
+    margin-top: 70px;
+    margin-bottom: 30px;
+  }
+
+  .title {
+    width: 560px;
+  }
+
+  .title p {
+    font-size: 44px;
+    line-height: 55px;
+  }
 }
