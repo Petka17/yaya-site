@@ -265,8 +265,10 @@ input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-s
 }
 
 .container {
-  padding: 30px;
-  min-width: 1440px;
+  padding: 30px 2.084%;
+  max-width: 1440px;
+  min-width: 1176px;
+  margin: 0 auto;
 }
 
 .button {
@@ -507,7 +509,7 @@ input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-s
 }
 
 .p-slider__image {
-  width: 67.3%;
+  width: 64.5%;
   display: inline-block;
   vertical-align: bottom;
   position: relative;
@@ -522,7 +524,9 @@ input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-s
   position: absolute;
   width: 29%;
   top: 124px;
-  left: 190px;
+  top: 8.6vw;
+  left: 6.5%;
+  margin-left: 126px;
 }
 
 .p-slider__subj {
@@ -550,8 +554,24 @@ input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-s
   margin-top: 46px;
 }
 
+.p-slider__type {
+  line-height: 20px;
+  font-size: 12px;
+  position: absolute;
+  right: 100%;
+  margin-right: 106px;
+  top: 5px;
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transform-origin: right top;
+      -ms-transform-origin: right top;
+          transform-origin: right top;
+}
+
 .p-slider .slick-dots {
-  left: 226px;
+  left: 6.5%;
+  margin-left: 162px;
   bottom: 83px;
 }
 
@@ -571,11 +591,20 @@ input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-s
 }
 
 .p-slider .ic-slider-arrow-prev {
-  left: 90px;
+  left: 6.5%;
+  margin-left: 26px;
 }
 
 .p-slider .ic-slider-arrow-next {
-  left: 170px;
+  left: 6.5%;
+  margin-left: 106px;
+}
+
+@media screen and (max-width: 1280px) {
+  .p-slider__title {
+    line-height: 45px;
+    font-size: 40px;
+  }
 }
 
 .a-slider {
@@ -592,17 +621,21 @@ input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-s
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 0 6.5%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .a-slider__phone, .a-slider__cnt {
   -webkit-box-flex: 50%;
       -ms-flex: 50% 1 1;
           flex: 50% 1 1;
-  padding: 0 6.45%;
 }
 
 .a-slider__phone {
-  text-align: right;
+  text-align: center;
+  padding-right: 1.35%;
 }
 
 .a-slider__image {
@@ -618,7 +651,11 @@ input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-s
 }
 
 .a-slider__cnt {
-  padding: 4.65% 0 0 7.2%;
+  padding: 5.3% 0 0 0;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 41.7%;
+          flex: 0 1 41.7%;
+  margin-left: 20px;
 }
 
 .a-slider__subj {
@@ -682,7 +719,7 @@ input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-s
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 29px 89px;
+  padding: 29px 6.5%;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-left: 0;
   border-right: 0;
@@ -701,6 +738,9 @@ input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-s
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1;
+          flex: 1 1;
 }
 
 .callback__icon {
@@ -718,9 +758,13 @@ input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-s
 
 .callback__form {
   width: 41.7%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 41.7%;
+          flex: 0 1 41.7%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-left: 20px;
 }
 
 .callback__input {
@@ -799,7 +843,7 @@ input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-s
 
 .recommendation {
   background: #F5F4F9;
-  padding: 50px 6.52% 74px;
+  padding: 50px 6.5% 74px;
 }
 
 .recommendation__title {
@@ -832,7 +876,7 @@ input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-s
 }
 
 .indicators {
-  padding: 51px 6.52% 60px;
+  padding: 51px 6.5% 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -861,7 +905,7 @@ input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-s
 
 .employers {
   background: #F5F4F9;
-  padding: 48px 6.52% 79px;
+  padding: 48px 6.5% 79px;
 }
 
 .employers__title {
