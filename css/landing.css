@@ -683,8 +683,8 @@ input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-s
 
 .a-slider .slick-dots {
   bottom: 173px;
-  right: 50%;
-  margin-right: -355px;
+  right: 42.7%;
+  margin-right: -254px;
 }
 
 .a-slider .slick-dots button {
@@ -704,13 +704,13 @@ input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-s
 }
 
 .a-slider .ic-slider-arrow-prev {
-  right: 50%;
-  margin-right: -170px;
+  right: 42.7%;
+  margin-right: -70px;
 }
 
 .a-slider .ic-slider-arrow-next {
-  right: 50%;
-  margin-right: -250px;
+  right: 42.7%;
+  margin-right: -150px;
 }
 
 .callback {
