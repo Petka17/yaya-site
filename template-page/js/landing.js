@@ -1,5 +1,11 @@
 $(function () {
 
+  var hostName = 'http://my.' + document.location.host;
+
+  document.querySelector('#sign_in').href = hostName + '/sign_in';
+
+  document.querySelector('#sign_up').href = hostName + '/sign_up';
+
   $('.js-slider').slick({
     nextArrow: '<button class="ic-slider-arrow-next">',
     prevArrow: '<button class="ic-slider-arrow-prev">',
