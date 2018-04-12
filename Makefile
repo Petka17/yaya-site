@@ -6,7 +6,7 @@ DOCKER_REGISTRY := registry.yaya-dev.ru
 all: build push
 
 build:
-	docker build -t ${DOCKER_REGISTRY}/${PROJECT_NAME} .
+	docker build -t ${DOCKER_REGISTRY}/${PROJECT_NAME}:${BRANCH} .
 
 push:
-	docker push ${DOCKER_REGISTRY}/${PROJECT_NAME}
+	docker push ${DOCKER_REGISTRY}/${PROJECT_NAME}:${BRANCH}
