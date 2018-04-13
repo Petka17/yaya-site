@@ -5,9 +5,6 @@ pipeline {
         stage('Checkout') {
             steps {
                 checkout scm
-                script {
-                    env.BRANCH=env.GIT_BRANCH.substring(7)
-                }
             }
         }
 
