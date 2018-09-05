@@ -1,0 +1,22 @@
+@mixin list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin transition {
+  transition: all 0.2s ease-in-out;
+}
+
+@mixin align-items-fix {
+  content:'';
+  min-height:inherit;
+  font-size:0;
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder { @content; }
+  &:-moz-placeholder           { @content; }
+  &::-moz-placeholder          { @content; }
+  &:-ms-input-placeholder      { @content; }
+}

@@ -1,0 +1,44 @@
+.my-city {
+  position: relative;
+
+  &__value {
+    position: relative;
+    display: inline-block;
+    padding: 0 18px 0 22px;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: $black;
+    text-decoration: none;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 14px;
+      height: 17px;
+      background: url(../img/landing/location.svg) no-repeat center center;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 2px;
+      right: 0;
+      width: 0;
+      height: 0;
+      border: 3px solid $gray;
+      border-top-color: transparent;
+      border-left-color: transparent;
+      transform: rotate(45deg);
+
+    }
+  }
+
+  &__popup {
+    position: absolute;
+    top: 71px;
+    left: -49px;
+    z-index: 1;
+  }
+}

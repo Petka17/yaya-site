@@ -1,0 +1,107 @@
+@font-face {
+  font-family: 'Montserrat Semi Bold';
+  src: url('../fonts/Montserrat-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Medium.ttf');
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #fff;
+  font-family: 'Montserrat';
+  height: 100vh;
+}
+
+body > section {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+
+  height: 100%;
+
+  background: #f1f1f5 url(../img/back.svg) no-repeat bottom center;
+  background-size: 475px 135px;
+}
+
+.top {
+  flex-basis: 40px;
+  align-self: stretch;
+  flex-grow: 1;
+}
+
+body > img {
+  width: 134px;
+  height: auto;
+}
+
+.logo-title {
+  flex-basis: 65px;
+  align-self: stretch;
+}
+
+.title {
+  width: 255px;
+  height: auto;
+}
+
+.title p {
+  margin: 0;
+  font-family: 'Montserrat Semi Bold';
+  text-align: center;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.title-date {
+  flex-basis: 30px;
+  align-self: stretch;
+}
+
+.date {
+  width: 90px;
+  height: 30px;
+  background-color: #fae012;
+}
+
+.date p {
+  margin: 0;
+  line-height: 30px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.bottom {
+  flex-basis: 230px;
+  align-self: stretch;
+  flex-grow: 1;
+}
+
+/* Desktop screen Sizes */
+@media only screen and (min-width: 768px) {
+  body {
+      padding: 3% 3% 3% 3%;
+  }
+
+  body > section {
+    background-size: auto;
+  }
+
+  .title {
+    width: 560px;
+  }
+
+  .title p {
+    font-size: 44px;
+    line-height: 55px;
+  }
+}

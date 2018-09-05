@@ -1,0 +1,54 @@
+.advantages {
+  background-color: $lightgray;
+
+  &__in {
+    width: 80.5%;
+    margin: 0 auto;
+    padding: 60px 0;
+  }
+
+  &__list {
+    @include list;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    position: relative;
+    width: 27.5%;
+    padding-top: 118px;
+    box-sizing: border-box;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      margin-left: -60px;
+      width: 120px;
+      height: 120px;
+      background: url(../img/landing/rec-career.svg) no-repeat center center;
+    }
+  }
+
+  &__title {
+    margin-bottom: 27px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.5;
+    color: $black;
+  }
+
+  &__text {
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: #8F97B0;
+  }
+}

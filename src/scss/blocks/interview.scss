@@ -1,0 +1,72 @@
+.interview {
+  min-height: 1258px;
+  background: url(../img/landing/bg_interview.svg) no-repeat center center;
+
+  &__in {
+    width: 72.5%;
+    padding-top: 80px;
+    padding-bottom: 231px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  &__title {
+    margin: 0 auto 71px auto;
+    width: 80%;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 40px;
+    color: #fff;
+  }
+
+  &__coloured {
+    color: $yellow;
+  }
+
+  &__photo {
+    position: relative;
+    margin-bottom: 45px;
+  }
+
+  &__img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  &__btn {
+    position: absolute;
+    bottom: 38px;
+    left: 50%;
+    display: inline-block;
+    padding: 11px 45px;
+    box-sizing: border-box;
+    background-color: $yellow;
+    transform: translateX(-50%);
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    color: $black;
+    text-decoration: none;
+    border-radius: 40px;
+    outline: none;
+    @include transition;
+
+    &:hover,
+    &:focus {
+      background-color: $gold;
+    }
+  }
+
+  @media screen and (max-width: 1400px) {
+    &__btn {
+      bottom: 35px;
+    }
+  }
+
+  @media screen and (max-width: 1300px) {
+    &__btn {
+      bottom: 32px;
+    }
+  }
+}

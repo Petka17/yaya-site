@@ -1,0 +1,187 @@
+.city-popup {
+  width: 410px;
+  padding: 0 19px;
+  box-sizing: border-box;
+  background: #fff;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: 97px;
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    transform: rotate(45deg);
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    min-height: 70px;
+    border-bottom: 1px solid $lightgray;
+
+    &::after {
+      content:'';
+      min-height:inherit;
+      font-size:0;
+    }
+  }
+
+  &__name {
+    margin-left: 9px;
+    margin-right: 5px;
+    font-size: 14px;
+    color: $gray;
+  }
+
+  &__value {
+    font-size: 14px;
+    color: $black;
+  }
+
+  &__close {
+    margin-left: auto;
+    width: 30px;
+    height: 30px;
+    border: 1px solid $gray;
+    border-radius: 50%;
+    box-sizing: border-box;
+    font-family: 'Montserrat Semi Bold', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: $black;
+    background: #fff;
+    cursor: pointer;
+    outline: none;
+    @include transition;
+
+    &:hover,
+    &:focus {
+      color: $gray;
+    }
+  }
+
+  &__input {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    padding-left: 19px;
+    padding-right: 55px;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    background: $lightgray;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: $black;
+    line-height: 40px;
+    border-radius: 50px;
+    outline: none;
+
+    @include placeholder {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      color: $gray;
+    }
+
+    &:focus {
+      border-color: $gray;
+      @include placeholder {
+        color: transparent;
+      }
+    }
+  }
+
+  &__input-wrapper {
+    position: relative;
+
+    &::after {
+      content: "";
+      background: linear-gradient(#BDC5DF, #F5F4F9);
+      position: absolute;
+      left: -1px;
+      right: -1px;
+      top: -1px;
+      bottom: -1px;
+      border-radius: 40px;
+      z-index: -1;
+    }
+  }
+
+  &__search {
+    position: relative;
+  }
+
+  &__search-btn {
+    width: 20px;
+    height: 20px;
+    border: 0;
+    box-sizing: border-box;
+    position: absolute;
+    margin-top: -10px;
+    top: 0;
+    right: 0;
+    background: url(../img/landing/icon_search.svg) no-repeat center center;
+    cursor: pointer;
+    outline: none;
+    @include transition;
+
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+  }
+
+  //&__input-wrapper {
+  //  position: relative;
+  //  border-radius: 50px;
+  //  overflow: hidden;
+  //  z-index: 1;
+  //
+  //  &::after {
+  //    content: "";
+  //    position: absolute;
+  //    top: 0;
+  //    left: 0;
+  //    right: 0;
+  //    bottom: 0;
+  //  }
+  //}
+
+  &__search {
+    padding-top: 18px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid $lightgray;
+  }
+
+  &__search-btn {
+    position: absolute;
+    top: 50%;
+    right: 22px;
+  }
+
+  &__save {
+    padding-top: 22px;
+    padding-bottom: 20px;
+  }
+
+  &__save-btn {
+    padding: 12px 36px;
+    border: none;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    background: $yellow;
+    border-radius: 40px;
+    cursor: pointer;
+    @include transition;
+
+    &:hover,
+    &:focus {
+      background: $gold;
+    }
+  }
+
+
+}
+

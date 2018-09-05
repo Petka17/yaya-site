@@ -1,0 +1,106 @@
+.callback {
+  padding: 0;
+
+  &__in {
+    position: relative;
+    margin: 0 auto;
+    padding-left: 170px;
+    //width: 87.5%;
+    width: 91.5%;
+    min-height: 140px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 25px;
+      width: 114px;
+      height: 125px;
+      background: url(../img/landing/promo.png) no-repeat center center;
+    }
+
+    &::after {
+      content:'';
+      min-height:inherit;
+      font-size:0;
+    }
+  }
+
+  &__text {
+    display: inline-block;
+    width: 33%;
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  &__form {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 0;
+    width: 63.5%;
+    padding-right: 11px;
+    padding-bottom: 8px;
+    box-sizing: border-box;
+    flex-basis: auto;
+    flex-grow: 0;
+  }
+
+  &__submit-btn {
+    display: inline-block;
+    padding: 15px 40px;
+    border: none;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    font-size: 17px;
+    color: $black;
+    border-radius: 40px;
+    background-color: $yellow;
+    outline: none;
+    cursor: pointer;
+    @include transition;
+
+    &:hover,
+    &:focus {
+      background-color: $gold;
+    }
+  }
+
+  &__input-wrapper {
+    position: relative;
+    flex-grow: 1;
+    margin-right: 20px;
+    border-radius: 50px;
+
+
+    &::after {
+      content: "";
+      background: linear-gradient(#BDC5DF, #F5F4F9);
+      position: absolute;
+      left: -1px;
+      right: -1px;
+      top: -1px;
+      bottom: -1px;
+      border-radius: 40px;
+      z-index: -1;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    padding: 13px 20px;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    font-size: 17px;
+    color: $black;
+    border-radius: 50px;
+    outline: none;
+    @include transition;
+
+    &:focus {
+      border-color: $gray;
+    }
+  }
+}

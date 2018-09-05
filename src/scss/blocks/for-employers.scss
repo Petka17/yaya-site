@@ -1,0 +1,111 @@
+.for-employers {
+  background-color: $darkblue;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+  &__in {
+    display: flex;
+    justify-content: space-between;
+    width: 87.5%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 60px;
+    min-height: 270px;
+    box-sizing: border-box;
+    background: url(../img/landing/bg_for-employers.svg) no-repeat 77% 100%;
+  }
+
+  &__intro {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 30%;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 5px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 40px;
+    color: #fff;
+  }
+
+  &__conditions {
+    margin-bottom: 30px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: $yellow;
+    text-decoration: none;
+    outline: none;
+    @include transition;
+
+    &:hover,
+    &:focus {
+      color: $gold;
+    }
+  }
+
+  &__reg {
+    display: inline-block;
+    padding: 10px 25px;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: $black;
+    background-color: $yellow;
+    border-radius: 20px;
+    text-decoration: none;
+    outline: none;
+    @include transition;
+
+    &:hover,
+    &:focus {
+      background-color: $gold;
+    }
+  }
+
+  &__list {
+    @include list;
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    padding: 5px 70px 0 35px;
+    box-sizing: border-box;
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 60px;
+    width: 46%;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: #fff;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: $yellow;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 16px;
+      left: 13px;
+      width: 14px;
+      height: 10px;
+      background: url(../img/landing/tick.svg) no-repeat center center;
+    }
+  }
+}

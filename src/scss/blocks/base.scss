@@ -1,0 +1,78 @@
+.container {
+  padding: 26px 2.084%;
+}
+
+.header {
+  margin-bottom: 23px;
+  justify-content: flex-start;
+
+  &__logo {
+    margin-right: 34px;
+  }
+
+  &__contacts {
+    position: relative;
+    //margin-top: 5px;
+    margin-left: auto;
+    margin-right: 30px;
+    align-items: center;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -30px;
+      width: 1px;
+      height: 30px;
+      background: $lightgray;
+    }
+
+    .button {
+      padding: 0 12px;
+    }
+  }
+
+  &__contacts-text {
+    position: relative;
+    display: inline-block;
+    padding: 0 30px;
+    font-size: 14px;
+    line-height: 30px;
+    color: $black;
+    margin-right: 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 1px;
+      height: 30px;
+      background: $lightgray;
+    }
+  }
+
+  &__phone {
+    padding-left: 30px;
+    padding-right: 27px;
+    box-sizing: border-box;
+  }
+
+  &__right {
+    margin-top: 5px;
+    margin-left: 22px;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
