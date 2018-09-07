@@ -1,0 +1,68 @@
+// скроллбар
+.jspPane {
+  width: 100% !important;
+}
+
+.jspVerticalBar {
+  width: 3px;
+}
+
+.jspTrack {
+  background: $lightgray;
+}
+
+.jspDrag {
+  background: $gray;
+}
+
+// попапы с видео
+.video-popup {
+
+  .mfp-content {
+    position: relative;
+    width: 90%;
+    max-width: 900px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    box-sizing: border-box;
+  }
+
+  .mfp-close {
+    position: absolute;
+    left: 100%;
+    bottom: 100%;
+    width: 50px;
+    height: 50px;
+    color: $black;
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 1;
+    outline: none;
+    @include transition;
+
+    &:hover,
+    &:focus {
+      opacity: 0.9;
+    }
+  }
+}
+
+// кастомные контролы для видео
+.mejs__overlay-button {
+  width: 90px;
+  height: 90px;
+  background: url(../img/landing/video-btn.svg) no-repeat center center;
+  opacity: 1;
+  outline: none;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.mejs__overlay:hover > .mejs__overlay-button {
+  background-position: 0 0;
+  opacity: 0.9;
+}
+
+.mejs__overlay-play {
+  width: 100% !important;
+  height: 100% !important;
+}
