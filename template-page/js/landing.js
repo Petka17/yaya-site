@@ -1,10 +1,12 @@
 $(function () {
 
-	var hostName = 'http://my.' + document.location.host;
+	var hostName = 'https://my.' + document.location.host;
 
-	document.querySelector('#sign_in').href = hostName + '/sign_in';
+	document.querySelector('#sign_in').href = hostName + '/login';
 
-	document.querySelector('#sign_up').href = hostName + '/sign_up';
+	document.querySelector('#sign_up').href = hostName + '/registration';
+	document.querySelector('.promo__btn').href = hostName + '/registration';
+	document.querySelector('.interview__btn').href = hostName + '/registration';
 
 	$('.js-slider').slick({
 		nextArrow: '<button class="ic-slider-arrow-next">',
@@ -452,12 +454,41 @@ $(function () {
 
 	};
 
-	toggleCityPopup();
+	// toggleCityPopup();
 
 	$('body').on('click', function(e) {
 		$(e.target).closest('.balloon__add').toggleClass('active');
 		$(e.target).closest('.balloon__popup-add').toggleClass('active');
 	});
+
+	if ($('[data-popup-info]').length > 0) {
+		$('[data-popup-info]').magnificPopup({
+			mainClass: 'popup-one-screen',
+			callbacks: {
+				open: function() {
+					$(".popup-informer__wrap").mCustomScrollbar({
+						axis:"y",
+						autoHideScrollbar: true
+					});
+				}
+			}
+		});
+	}
+
+	if ($('[data-popup]').length > 0) {
+		$('[data-popup]').magnificPopup({
+			mainClass: 'popup-content-type'
+		});
+	}
+
+	makeHeaderSticky();
+
+	var copyBtns = document.querySelectorAll('.js-copy');
+	if (copyBtns.length > 0) {
+		var clipboard = new ClipboardJS(copyBtns);
+	}
+
+
 
 });
 
@@ -484,6 +515,34 @@ function toggleCityPopup() {
 			cityPopup.fadeOut(200);
 		}
 	});
+}
+
+function makeHeaderSticky() {
+	var anchor = $('.header__anchor');
+	var headerContent = $('.header__wrapper');
+	function makeSticky() {
+		var docTop = $(document).scrollTop(),
+			anchorTop = $(anchor).offset().top;
+		if (docTop > anchorTop) {
+			headerContent.addClass('header-fixed');
+			headerContent.css('width', $('.header').width());
+			headerContent.css('left', $('.header').offset().left);
+			anchor.height(headerContent.outerHeight());
+		} else {
+			headerContent.removeClass('header-fixed');
+			headerContent.css('left', 0);
+			anchor.height(0);
+		}
+	}
+	if (anchor.length > 0 && headerContent.length > 0) {
+		$(window).on('load', function() {
+			makeSticky();
+		});
+
+		$(window).on('scroll', function() {
+			makeSticky();
+		});
+	}
 }
 
 

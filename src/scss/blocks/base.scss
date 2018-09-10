@@ -1,10 +1,23 @@
 .container {
-  padding: 26px 2.084%;
+  padding: 0 2.084%;
 }
 
 .header {
-  margin-bottom: 23px;
-  justify-content: flex-start;
+  //margin-bottom: 23px;
+  //justify-content: flex-start;
+  margin-bottom: 0;
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    padding-top: 23px;
+    padding-bottom: 23px;
+    box-sizing: border-box;
+    background: #fff;
+    z-index: 2;
+  }
 
   &__logo {
     margin-right: 34px;
@@ -41,6 +54,8 @@
     color: $black;
     margin-right: 0;
 
+    display: none;
+
     &::after {
       content: "";
       position: absolute;
@@ -53,15 +68,62 @@
   }
 
   &__phone {
-    padding-left: 30px;
-    padding-right: 27px;
+    position: relative;
+    margin-left: 30px;
+    margin-right: 27px;
     box-sizing: border-box;
+
+    &-btn {
+      width: 100%;
+      border: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      line-height: 20px;
+      color: $black;
+      background: #fff;
+      outline: none;
+      cursor: pointer;
+    }
   }
 
   &__right {
     margin-top: 5px;
     margin-left: 22px;
   }
+}
+
+.header-fixed {
+  position: fixed;
+  top: 0;
+}
+
+.header__phone,
+.footer__phone {
+  cursor: pointer;
+}
+
+.footer__phone-btn {
+  border: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  line-height: 30px;
+  font-size: 20px;
+  color: white;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+.ic-social-inst {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #5B657C;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background: url(../img/landing/instagram.svg) no-repeat center center;
 }
 
 .visually-hidden {

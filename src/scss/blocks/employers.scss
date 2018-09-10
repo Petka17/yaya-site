@@ -12,6 +12,17 @@
     padding-bottom: 4px;
   }
 
+  &__logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 3px;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
   &__desc {
     display: none;
   }
@@ -40,5 +51,15 @@
 
   &__count-text {
     font-size: 14px;
+  }
+
+  @media screen and (max-width: 1250px) {
+    &__count {
+      padding: 11px 20px;
+    }
+
+    &__count-text {
+      font-size: 12px;
+    }
   }
 }
