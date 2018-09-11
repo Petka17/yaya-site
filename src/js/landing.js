@@ -1,12 +1,25 @@
 $(function () {
 
+	var startTimeoutFunction = false;
+	var asideVacancyFormTimeout;
+
 	var hostName = 'https://my.' + document.location.host;
 
-	document.querySelector('#sign_in').href = hostName + '/login';
+	if (document.querySelector('#sign_in')) {
+		document.querySelector('#sign_in').href = hostName + '/login';
+	}
 
-	document.querySelector('#sign_up').href = hostName + '/registration';
-	document.querySelector('.promo__btn').href = hostName + '/registration';
-	document.querySelector('.interview__btn').href = hostName + '/registration';
+	if (document.querySelector('#sign_up')) {
+		document.querySelector('#sign_up').href = hostName + '/registration';
+	}
+
+	if (document.querySelector('.promo__btn')) {
+		document.querySelector('.promo__btn').href = hostName + '/registration';
+	}
+
+	if (document.querySelector('.interview__btn')) {
+		document.querySelector('.interview__btn').href = hostName + '/registration';
+	}
 
 	$('.js-slider').slick({
 		nextArrow: '<button class="ic-slider-arrow-next">',
@@ -19,7 +32,7 @@ $(function () {
 
 
 	var loadMap = setInterval(function () {
-		if (typeof(ymaps) === 'object' && typeof(ymaps.Map) === 'function') {
+		if (typeof(ymaps) === 'object' && typeof(ymaps.Map) === 'function' && document.querySelector('#map')) {
 			ymaps.ready(init('map'));
 			clearInterval(loadMap);
 		}
@@ -459,6 +472,7 @@ $(function () {
 	$('body').on('click', function(e) {
 		$(e.target).closest('.balloon__add').toggleClass('active');
 		$(e.target).closest('.balloon__popup-add').toggleClass('active');
+		$(e.target).closest('.popup-video__add').toggleClass('active');
 	});
 
 	if ($('[data-popup-info]').length > 0) {
@@ -481,6 +495,22 @@ $(function () {
 		});
 	}
 
+	if ($('[data-popup-video]').length > 0) {
+		$('[data-popup-video]').magnificPopup({
+			mainClass: 'video-popup'
+		});
+
+		$('.popup-video__video').mediaelementplayer({
+			alwaysShowControls: true,
+			videoVolume: 'vertical',
+			features: ['playpause', 'current', 'progress', 'duration', 'tracks', 'volume', 'fullscreen']
+		});
+	}
+
+	if ($('[data-phone-tooltip]').length > 0) {
+
+	}
+
 	makeHeaderSticky();
 
 	var copyBtns = document.querySelectorAll('.js-copy');
@@ -488,6 +518,15 @@ $(function () {
 		var clipboard = new ClipboardJS(copyBtns);
 	}
 
+	checkVacancyAsideForm();
+
+	if ($('.vacancy-aside__stage2').length > 0) {
+		$('.vacancy-aside__stage2').hide();
+	}
+
+	if ($('#callback').length > 0) {
+		validateCallbackInput($('#callback'));
+	}
 
 
 });
@@ -544,5 +583,127 @@ function makeHeaderSticky() {
 		});
 	}
 }
+
+function checkVacancyAsideForm() {
+	var form = $('.vacancy-aside__form');
+	var saveBtn = form.find('.js-save-phone');
+	var phoneNumContainer = form.find('.vacancy-aside__phone');
+	var phoneInput = form.find('[name="phone"]');
+	var codeInput = form.find('[name="code"]');
+	var timeContainer = form.find('.vacancy-aside__repeat-time');
+	var repeatTextContainer = form.find('.vacancy-aside__repeat-text');
+	var resendBtn = form.find('.vacancy-aside__resend');
+	var timeToExpire = 10;
+	var stage1 = form.find('.vacancy-aside__stage1');
+	var stage2 = form.find('.vacancy-aside__stage2');
+	var changePhoneBtn = form.find('.vacancy-aside__change-phone');
+	var regCode = /^\d{5}$/;
+
+	if (form.length === 0 || saveBtn.length === 0) {
+		return;
+	}
+
+	resendBtn.hide();
+
+	saveBtn.on('click', function(e) {
+		e.preventDefault();
+		var phoneWrittenByUser = phoneInput.inputmask('unmaskedvalue');
+		var userLoginToShow;
+		var userLogin;
+		if (phoneWrittenByUser.length !== 10) {
+			phoneInput.parent().next().addClass('isError');
+		} else {
+			phoneInput.parent().next().removeClass('isError');
+			userLoginToShow = phoneInput.val();
+			userLogin = userLoginToShow.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"");
+			userLogin = userLogin.replace(/\s/g, '');
+			stage1.fadeOut();
+			phoneNumContainer.text(userLoginToShow);
+			timeContainer.text(timeToExpire);
+			stage2.fadeIn();
+			setTimeout(function() {
+				return timer(timeContainer, repeatTextContainer, resendBtn, changePhoneBtn);
+			}, 1000);
+		}
+	});
+
+	resendBtn.on('click', function(e) {
+		e.preventDefault();
+		resendCode($(this), repeatTextContainer, timeContainer, timeToExpire);
+	});
+
+	changePhoneBtn.on('click', function() {
+		clearTimeout(asideVacancyFormTimeout);
+		changePhone(phoneNumContainer, phoneInput, stage2, stage1, repeatTextContainer, timeContainer, resendBtn)
+	});
+
+	form.on('submit', function(e) {
+		e.preventDefault();
+		if (phoneNumContainer.text().length === 0) {
+			saveBtn.trigger('click');
+		} else {
+
+			console.log(codeInput.val().match(regCode));
+			if (!codeInput.val().match(regCode)) {
+				codeInput.parent().next().addClass('isError');
+			} else {
+				clearTimeout(asideVacancyFormTimeout);
+				codeInput.parent().next().removeClass('isError');
+				console.log('submit');
+			}
+		}
+	});
+}
+
+function changePhone(phoneNumContainer, phoneInput, containerToHide, containerToShow, repeatTextContainer, timeContainer, resendBtn) {
+	phoneNumContainer.text('');
+	phoneInput.val('');
+	containerToHide.fadeOut();
+	containerToShow.fadeIn();
+	repeatTextContainer.show();
+	timeContainer.show();
+	resendBtn.hide();
+}
+
+function timer(selector, text, resend, changeBtn) {
+	var time = +selector.text();
+	time--;
+	selector.text(time);
+	if (time === 0) {
+		selector.hide();
+		text.hide();
+		resend.show();
+	} else {
+		asideVacancyFormTimeout = setTimeout(function() {
+			return timer(selector, text, resend, changeBtn)
+		}, 1000);
+	}
+}
+
+function resendCode(resendBtn, textContainer, timeContainer, time) {
+	resendBtn.hide();
+	timeContainer.text(time);
+	textContainer.show();
+	timeContainer.show();
+	setTimeout(function() {
+		return timer(timeContainer, textContainer, resendBtn);
+	}, 1000);
+}
+
+function validateCallbackInput(selector) {
+	var btn = selector.find('.button');
+	var phoneInput = selector.find('[name="phone"]');
+
+	btn.on('click', function(e) {
+		var phoneWrittenByUser = phoneInput.inputmask('unmaskedvalue');
+		e.preventDefault();
+		if (phoneWrittenByUser.length !== 10) {
+			phoneInput.parent().next().addClass('isError');
+		} else {
+			phoneInput.parent().next().removeClass('isError');
+		}
+	})
+}
+
 
 

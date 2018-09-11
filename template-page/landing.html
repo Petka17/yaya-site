@@ -52,7 +52,8 @@
           <div class="header__contacts">
             <div class="header__contacts-text">Работодателям</div>
             <div class="header__phone">
-              <button data-clipboard-text="8 (800) 234-74-04" class="header__phone-btn js-copy" title="Копировать в буфер">8 (800) 234-74-04</button>
+              <button data-clipboard-text="8 (800) 234-74-04" class="header__phone-btn js-copy">8 (800) 234-74-04</button>
+              <div class="phone-tooltip" data-phone-tooltip>Кликните, чтобы скопировать в буфер</div>
             </div>
             <a class="button button_light" href="#callback" data-popup>Перезвоните мне</a>
           </div>
@@ -238,13 +239,14 @@
         </div>
         <div class="footer__col">
           <div class="social footer__social">
+            <a class="social__item ic-social-inst" href="http://instagram.com/yayaru_official/"></a>
             <a class="social__item ic-social-vk" href="https://vk.com/yayaru"></a>
             <a class="social__item ic-social-fb" href="https://www.facebook.com/yayaruofficial/"></a>
             <a class="social__item ic-social-ok" href="https://www.ok.ru/group/54194834309337"></a>
           </div>
           <div class="footer__contacts">
-            <!--<div class="footer__phone" id="footer-phone" title="Копировать в буфер">8 (800) 234-74-04</div>-->
-            <button class="footer__phone-btn js-copy" data-clipboard-text="8 (800) 234-74-04"  title="Копировать в буфер">8 (800) 234-74-04</button>
+            <button class="footer__phone-btn js-copy" data-clipboard-text="8 (800) 234-74-04">8 (800) 234-74-04</button>
+            <div class="phone-tooltip" data-phone-tooltip>Кликните, чтобы скопировать в буфер</div>
             <div class="footer__phone-text">Бесплатно из всех регионов России</div>
           </div>
           <div class="footer__call">
@@ -270,7 +272,7 @@
             <div class="input-combo__input input-combo__input-small">
               <input class="form-input form-input_gray register-phone js-mask-phone" type="text" name="phone" data-phone="" value="" placeholder="+7 (×××) ××× ×× ××">
             </div>
-            <div class="input-combo__error isError"></div>
+            <div class="input-combo__error">Введите номер</div>
           </div>
           <a class="button" href="#callback" data-popup="">Готово</a>
         </div>

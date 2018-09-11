@@ -84,6 +84,11 @@
       background: #fff;
       outline: none;
       cursor: pointer;
+
+      &:hover ~ .phone-tooltip {
+        visibility: visible;
+        opacity: 1;
+      }
     }
   }
 
@@ -91,6 +96,26 @@
     margin-top: 5px;
     margin-left: 22px;
   }
+}
+
+.phone-tooltip {
+  position: absolute;
+  top: 110%;
+  left: 20%;
+  padding: 5px 10px;
+  width: 100%;
+  max-width: 140px;
+  box-sizing: border-box;
+  text-align: left;
+  font-size: 10px;
+  line-height: 1.5;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.09);
+
+  visibility: hidden;
+  opacity: 0;
+  @include transition;
 }
 
 .header-fixed {
@@ -114,6 +139,21 @@
   background: transparent;
   outline: none;
   cursor: pointer;
+
+  &:hover ~ .phone-tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.footer__contacts {
+  position: relative;
+
+  .phone-tooltip {
+    top: 70%;
+    left: auto;
+    right: 0;
+  }
 }
 
 .ic-social-inst {
@@ -137,4 +177,22 @@
 
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.input-combo__error {
+  //min-height: 26px;
+  line-height: 10px;
+  font-size: 9px;
+  font-weight: 700;
+  color: #bdc5df;
+  padding: 5px 11px 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .2s ease-in-out;
+
+  &.isError {
+    color: #e84c3d;
+    visibility: visible;
+    opacity: 1;
+  }
 }
