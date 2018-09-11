@@ -1616,7 +1616,7 @@ yx-axis
 
 .balloon__employer { font-size: 9px; line-height: 10px; color: #8F97B0; }
 
-.balloon__add, .balloon__popup-add { margin-left: auto; width: 30px; height: 30px; border: 1px solid #BDC5DF; box-sizing: border-box; border-radius: 50%; background: #fff; cursor: pointer; outline: none; transition: all 0.2s ease-in-out; }
+.balloon__add, .balloon__popup-add { margin-left: auto; width: 30px; height: 30px; border: 1px solid #BDC5DF; box-sizing: border-box; border-radius: 50%; background: #fff; cursor: pointer; outline: none; transition: all 0.2s ease-in-out; display: none; /* скрыты для незарегистрированных пользователей */ }
 
 .balloon__add:hover, .balloon__add.active, .balloon__popup-add:hover, .balloon__popup-add.active { border-color: #FCC900; }
 

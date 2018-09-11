@@ -270,6 +270,8 @@
     outline: none;
     @include transition;
 
+    display: none; /* скрыты для незарегистрированных пользователей */
+
     &:hover,
     &.active {
       border-color: $gold;
