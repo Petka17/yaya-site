@@ -1,0 +1,119 @@
+.stages {
+  min-height: 830px;
+  border-bottom: 1px solid #fff;
+  background: $lightgray url(../img/mobile/bg-main.svg) no-repeat;
+  background-position: 50% 170px;
+  background-size: cover;
+
+  &__in {
+    margin: 0 auto;
+    padding-top: 70px;
+    padding-bottom: 45px;
+    width: 75%;
+    box-sizing: border-box;
+  }
+
+  &__list {
+    @include list;
+  }
+
+  &__item {
+    position: relative;
+    margin-bottom: 44px;
+    padding-top: 130px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      margin-left: -60px;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background-color: $yellow;
+    }
+
+    &_step1::after {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      margin-left: -30px;
+      width: 59px;
+      height: 103px;
+      background: url(../img/mobile/step1.svg) no-repeat center center;
+    }
+
+    &_step2::after {
+      content: "";
+      position: absolute;
+      top: 25px;
+      left: 50%;
+      margin-left: -35px;
+      width: 70px;
+      height: 70px;
+      background: url(../img/mobile/step2.svg) no-repeat center center;
+    }
+
+    &_step3::after {
+      content: "";
+      position: absolute;
+      top: 16px;
+      left: 50%;
+      margin-left: -32px;
+      width: 73px;
+      height: 85px;
+      background: url(../img/mobile/step3.svg) no-repeat center center;
+    }
+  }
+
+  &__title {
+    margin: 0 0 6px 0;
+    text-align: center;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 600;
+    color: $black;
+  }
+
+  &__text {
+    margin: 0;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.43;
+    color: $darkgray;
+  }
+
+  @media screen and (min-width: 360px) {
+
+    &__item {
+      padding-top: 140px;
+    }
+
+    &__title {
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    &__text {
+      font-size: 16px;
+    }
+  }
+
+  @media screen and (min-width: 400px) {
+    background-position: 50% 125px;
+  }
+
+  @media screen and (min-width: 450px) {
+    background-position: 50% 50px;
+  }
+
+  @media screen and (min-width: 480px) {
+    background-position: 50% 0;
+  }
+}

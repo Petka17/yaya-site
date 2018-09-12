@@ -1,0 +1,20 @@
+.mejs__overlay-button {
+  width: 70px;
+  height: 70px;
+  background: url(../img/mobile/video-btn.svg) no-repeat center center;
+  background-size: contain;
+  opacity: 1;
+  outline: none;
+  @include transition;
+}
+
+.mejs__overlay:hover > .mejs__overlay-button {
+  background-position: 0 0;
+  opacity: 0.9;
+}
+
+.mejs__overlay-play,
+.mejs__layer {
+  width: 100% !important;
+  height: 100% !important;
+}

@@ -1,0 +1,77 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Medium.eot");
+  src: url("../fonts/Montserrat-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-Medium.woff2") format("woff2"), url("../fonts/Montserrat-Medium.woff") format("woff"), url("../fonts/Montserrat-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-SemiBold.eot");
+  src: url("../fonts/Montserrat-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../fonts/Montserrat-SemiBold.woff") format("woff"), url("../fonts/Montserrat-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ya-ya";
+  src: url("../fonts/ya-ya.eot");
+  src: url("../fonts/ya-ya.eot?#iefix") format("eot"), url("../fonts/ya-ya.woff2") format("woff2"), url("../fonts/ya-ya.woff") format("woff"), url("../fonts/ya-ya.ttf") format("truetype"), url("../fonts/ya-ya.svg#ya-ya") format("svg");
+}
+
+.ic-arrow-right-b, .ic-arrow-right, .ic-lock, .ic-minus, .ic-phone, .ic-plus, .ic-slider-arrow-next, .ic-slider-arrow-prev, .ic-social-fb, .ic-social-ok, .ic-social-vk {
+  font-family: "ya-ya";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  text-decoration: none;
+  text-transform: none;
+}
+
+.ic-arrow-right-b:before {
+  content: "\E001";
+}
+
+.ic-arrow-right:before {
+  content: "\E002";
+}
+
+.ic-lock:before {
+  content: "\E003";
+}
+
+.ic-minus:before {
+  content: "\E004";
+}
+
+.ic-phone:before {
+  content: "\E005";
+}
+
+.ic-plus:before {
+  content: "\E006";
+}
+
+.ic-slider-arrow-next:before {
+  content: "\E007";
+}
+
+.ic-slider-arrow-prev:before {
+  content: "\E008";
+}
+
+.ic-social-fb:before {
+  content: "\E009";
+}
+
+.ic-social-ok:before {
+  content: "\E00A";
+}
+
+.ic-social-vk:before {
+  content: "\E00B";
+}

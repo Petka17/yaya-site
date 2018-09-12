@@ -1,0 +1,27 @@
+.footer {
+  text-align: center;
+  background-color: $lightgray;
+
+  &__in {
+    padding-top: 51px;
+    padding-bottom: 25px;
+  }
+
+  &__logo {
+    display: inline-block;
+    width: 104px;
+    //margin-bottom: 30px;
+    margin-bottom: 60px;
+  }
+
+  &__logo-img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  &__copyright {
+    font-size: 14px;
+    line-height: 20px;
+    color: $gray;
+  }
+}
