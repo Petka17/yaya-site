@@ -7,7 +7,7 @@ $(function() {
 	if ($('.intro__link-wrapper').length > 0) {
 		fixButton($('.intro__link-wrapper'));
 	}
-	
+
 });
 
 function playVideo(selector) {

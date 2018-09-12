@@ -597,7 +597,7 @@ function checkVacancyAsideForm() {
 	var stage1 = form.find('.vacancy-aside__stage1');
 	var stage2 = form.find('.vacancy-aside__stage2');
 	var changePhoneBtn = form.find('.vacancy-aside__change-phone');
-	var regCode = /^\d{5}$/;
+	var regCode = /^\d{4}$/;
 
 	if (form.length === 0 || saveBtn.length === 0) {
 		return;
@@ -642,8 +642,6 @@ function checkVacancyAsideForm() {
 		if (phoneNumContainer.text().length === 0) {
 			saveBtn.trigger('click');
 		} else {
-
-			console.log(codeInput.val().match(regCode));
 			if (!codeInput.val().match(regCode)) {
 				codeInput.parent().next().addClass('isError');
 			} else {
