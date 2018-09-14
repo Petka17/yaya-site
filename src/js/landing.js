@@ -21,6 +21,10 @@ $(function () {
 		document.querySelector('.interview__btn').href = hostName + '/registration';
 	}
 
+	if ($('.employers__count').length > 0) {
+		$('.employers__count').attr('href', hostName + '/registration');
+	}
+
 	$('.js-slider').slick({
 		nextArrow: '<button class="ic-slider-arrow-next">',
 		prevArrow: '<button class="ic-slider-arrow-prev">',
