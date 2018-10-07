@@ -10,3 +10,6 @@ build:
 
 push:
 	docker push ${DOCKER_REGISTRY}/${PROJECT_NAME}:${GIT_BRANCH}
+
+test:
+	docker run -p 8080:80 -v /data/static/logs/ ${DOCKER_REGISTRY}/${PROJECT_NAME}:${GIT_BRANCH}
