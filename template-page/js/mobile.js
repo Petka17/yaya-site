@@ -8,7 +8,21 @@ $(function() {
 		fixButton($('.intro__link-wrapper'));
 	}
 
+	if ($('#main-link').length > 0 ) {
+		changeLink($('#main-link'))
+	}
+
 });
+
+function isiOS () {
+	return !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+}
+
+function changeLink(selector) {
+	if (isiOS()) {
+		selector[0].href = "https://itunes.apple.com/ru/app/yaya-вакансии/id1421839165"
+	}
+}
 
 function playVideo(selector) {
 	var video = selector.parent().find('video');
@@ -31,7 +45,6 @@ function playVideo(selector) {
 
 function fixButton(selector) {
 	var triggerHeight = selector.offset().top + selector.height();
-	console.log(triggerHeight);
 	$(window).on('scroll', function() {
 		if ($(document).scrollTop() > triggerHeight) {
 			selector.addClass('fixed');
