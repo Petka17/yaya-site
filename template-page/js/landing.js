@@ -13,13 +13,13 @@ $(function () {
 		document.querySelector('#sign_up').href = hostName + '/registration';
 	}
 
-	if (document.querySelector('.promo__btn')) {
-		document.querySelector('.promo__btn').href = hostName + '/registration';
-	}
+	// if (document.querySelector('.promo__btn')) {
+	// 	document.querySelector('.promo__btn').href = hostName + '/registration';
+	// }
 
-	if (document.querySelector('.interview__btn')) {
-		document.querySelector('.interview__btn').href = hostName + '/registration';
-	}
+	// if (document.querySelector('.interview__btn')) {
+	// 	document.querySelector('.interview__btn').href = hostName + '/registration';
+	// }
 
 	if ($('.employers__count').length > 0) {
 		$('.employers__count').attr('href', hostName + '/registration');
