@@ -30,15 +30,15 @@
     margin-right: 30px;
     align-items: center;
 
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: -30px;
-      width: 1px;
-      height: 30px;
-      background: $lightgray;
-    }
+    // &::after {
+    //   content: "";
+    //   position: absolute;
+    //   top: 0;
+    //   right: -30px;
+    //   width: 1px;
+    //   height: 30px;
+    //   background: $lightgray;
+    // }
 
     .button {
       padding: 0 12px;

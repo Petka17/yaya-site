@@ -19,15 +19,43 @@
     padding-top: 118px;
     box-sizing: border-box;
 
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 50%;
-      margin-left: -60px;
-      width: 120px;
-      height: 120px;
-      background: url(../img/landing/rec-career.svg) no-repeat center center;
+    &__1 {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -60px;
+        width: 120px;
+        height: 120px;
+        background: url(../img/landing/rec-data.svg) no-repeat center center;
+      }
+    }
+
+    &__2 {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -60px;
+        width: 120px;
+        height: 120px;
+        background: url(../img/landing/rec-vacancies.svg) no-repeat center center;
+      }
+    }
+
+    &__3 {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -60px;
+        width: 120px;
+        height: 120px;
+        background: url(../img/landing/rec-search.svg) no-repeat center center;
+      }
     }
   }
 
