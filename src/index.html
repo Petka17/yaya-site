@@ -39,7 +39,7 @@
         <div class="header__wrapper">
           <div class="header__left">
             <a href="https://yaya.ru/" class="header__logo">
-              <img src="img/landing/logo.svg">
+              <img style="width:158px;" src="img/landing/logo.svg">
             </a>
             <div class="my-city">
               <div class="my-city__value">Москва</div>
@@ -67,24 +67,21 @@
           </div>
 
           <div class="header__contacts">
-            <div class="header__contacts-text">Работодателям</div>
+            <!-- <div class="header__contacts-text">Работодателям</div> -->
             <div class="header__phone">
               <button data-clipboard-text="8 (800) 234-74-04" class="header__phone-btn js-copy">8 (800) 234-74-04</button>
               <div class="phone-tooltip" data-phone-tooltip>Кликните, чтобы скопировать в буфер</div>
             </div>
             <a class="button button_light" href="#callback" data-popup>Перезвоните мне</a>
           </div>
-          <div class="header__right">
-            <a class="button" id="sign_in" href="#"><span class="button__icon ic-lock"></span>Вход</a>
-            <a class="button" id="sign_up" href="#">Регистрация</a>
-          </div>
+          
         </div>
       </div>
       <!-- header END-->
       <div class="main">
 
         <!--promo-->
-        <div class="promo">
+        <!-- <div class="promo">
           <div class="promo__in">
             <span class="promo__days">8 дней</span>
             <div class="promo__desc">
@@ -96,7 +93,7 @@
             </div>
             <a href="https://play.google.com/store/apps/details?id=ru.yaya" class="promo__btn btn">Найти работу</a>
           </div>
-        </div>
+        </div> -->
         <!--promo END-->
 
         <!--interview-->
@@ -107,7 +104,7 @@
               <span class="interview__text">новый формат быстрого собеседования</span>
             </h1>
             <div class="interview__photo">
-              <video src="video/landing.mp4" alt="" class="interview__img"/>
+              <video src="video/landing.mp4" alt="" class="interview__img" controls/>
               <a href="#" class="interview__btn">Начать запись</a>
             </div>
 
@@ -149,78 +146,11 @@
         </div>
         <!--advantages END-->
 
-        <!--callback-->
-        <div class="callback">
-          <div class="callback__in">
-            <strong class="callback__text">Зарегистрируйтесь и найдите работу уже сегодня!</strong>
-            <form action="#" class="callback__form">
-              <div class="callback__input-wrapper">
-                <input type="tel" class="callback__input js-mask-phone" placeholder="+7 (×××) ××× ×× ××">
-              </div>
-              <button type="submit" class="callback__submit-btn">Найти работу</button>
-            </form>
-          </div>
-        </div>
-        <!--callback END-->
+        
 
-        <!-- map-->
-        <div class="map">
-          <div class="map__in"
-            <div class="map__title">345 вакансий в Москве</div>
-            <div class="map__overlay"></div>
-          </div>
-          <!--<div class="map__container" id="map" data-center="55.96197851085319,37.544585690887615"></div>-->
-          <div class="map__container" id="map" data-center="55.731023, 37.629272"></div>
-        </div>
-        <!-- map END-->
+        
 
-        <!-- employers-->
-        <div class="employers">
-          <h2 class="employers__title">Самые надежные работодатели</h2>
-          <div class="employers__in">
-            <div class="employers__item">
-              <div class="employers__head">
-                <div class="employers__logo">
-                  <img class="employers__logo-img" src="img/landing/logo-starb.png" srcset="img/landing/logo-starb.png 1x, img/landing/logo-starb@2x.png 2x" alt="" role="presentation" />
-                </div>
-                <a class="employers__count" href="#"><span class="employers__count-text">29 вакансий</span><span class="employers__count-icon ic-arrow-right-b"></span></a>
-              </div>
-              <h4 class="employers__name">Старбакс</h4>
-              <div class="employers__desc">Одна из крупнейших и самых динамично развивающихся компаний в сфере ресторанного бизнеса в Москве, регионах России и странах СНГ.</div>
-            </div>
-            <div class="employers__item">
-              <div class="employers__head">
-                <div class="employers__logo">
-                  <img class="employers__logo-img" src="img/landing/logo-hoff.png" srcset="img/landing/logo-hoff.png 1x, img/landing/logo-hoff@2x.png 2x" alt="" role="presentation" />
-                </div>
-                <a class="employers__count" href="#"><span class="employers__count-text">29 вакансий</span><span class="employers__count-icon ic-arrow-right-b"></span></a>
-              </div>
-              <h4 class="employers__name">Hoff</h4>
-              <div class="employers__desc">Сеть гипермаркетов Hoff — это одна из крупнейших российских мебельных сетей. Это единственная российская сеть мебели и аксессуаров для дома, работающая в формате гипермаркета.</div>
-            </div>
-            <div class="employers__item">
-              <div class="employers__head">
-                <div class="employers__logo">
-                  <img class="employers__logo-img" src="img/landing/logo-burger.png" srcset="img/landing/logo-burger.png 1x, img/landing/logo-burger@2x.png 2x" alt="" role="presentation" />
-                </div>
-                <a class="employers__count" href="#"><span class="employers__count-text">29 вакансий</span><span class="employers__count-icon ic-arrow-right-b"></span></a>
-              </div>
-              <h4 class="employers__name">Burger King</h4>
-              <div class="employers__desc">Американская компания, владелец глобальной сети ресторанов быстрого питания Burger King, специализирующейся на гамбургерах.</div>
-            </div>
-            <div class="employers__item">
-              <div class="employers__head">
-                <div class="employers__logo">
-                  <img class="employers__logo-img" src="img/landing/logo-mac.png" srcset="img/landing/logo-mac.png 1x, img/landing/logo-mac@2x.png 2x" alt="" role="presentation" />
-                </div>
-                <a class="employers__count" href="#"><span class="employers__count-text">29 вакансий</span><span class="employers__count-icon ic-arrow-right-b"></span></a>
-              </div>
-              <h4 class="employers__name">Макдональдс</h4>
-              <div class="employers__desc">Американская корпорация, до 2010 года крупнейшая в мире сеть ресторанов быстрого питания, работающая по системе франчайзинга</div>
-            </div>
-          </div>
-        </div>
-        <!-- employers END-->
+       
 
         <!--for-employers-->
         <!--<div class="for-employers">-->
