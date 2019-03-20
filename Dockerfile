@@ -1,6 +1,6 @@
 FROM node:8.12.0-slim as build-site
 
-RUN apt update && apt upgrade && apt install -y python2.7 python-pip
+RUN apt update -y && apt upgrade -y && apt install -y python2.7 python-pip
 WORKDIR ~/app
 COPY package.json .
 COPY package-lock.json .
