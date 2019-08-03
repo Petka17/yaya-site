@@ -7,7 +7,7 @@ COPY package-lock.json .
 RUN npm install
 
 COPY . .
-RUN yarn gulp --buildPath dist
+RUN yarn gulp --buildPath dist >/dev/null
 
 FROM nginx:1.13.7-alpine
 COPY --from=build-site ~/app/dist /usr/share/nginx/html/
